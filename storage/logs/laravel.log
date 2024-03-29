@@ -1,0 +1,634 @@
+[2024-03-29 13:24:16] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (Connection: mysql, SQL: select * from information_schema.tables where table_schema = forge and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (Connection: mysql, SQL: select * from information_schema.tables where table_schema = forge and table_name = migrations and table_type = 'BASE TABLE') at C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:795)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(407): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(394): Illuminate\\Database\\Connection->select('select * from i...', Array, false)
+#3 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(43): Illuminate\\Database\\Connection->selectFromWriteConnection('select * from i...', Array)
+#4 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(184): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#5 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(700): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#6 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(140): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#7 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(248): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}(1)
+#8 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(140): retry(1, Object(Closure), 0, Object(Closure))
+#9 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(116): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->repositoryExists()
+#10 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(84): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#11 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#12 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(83): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#13 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\symfony\\console\\Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\symfony\\console\\Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 {main}
+
+[previous exception] [object] (PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) at C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:65)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(65): PDO->__construct('mysql:host=127....', 'forge', Object(SensitiveParameterValue), Array)
+#1 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(44): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'forge', '', Array)
+#2 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1275): call_user_func(Object(Closure))
+#6 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(521): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(416): Illuminate\\Database\\Connection->getPdoForSelect(false)
+#8 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(788): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#9 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#10 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(407): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(394): Illuminate\\Database\\Connection->select('select * from i...', Array, false)
+#12 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(43): Illuminate\\Database\\Connection->selectFromWriteConnection('select * from i...', Array)
+#13 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(184): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(700): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(140): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(248): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}(1)
+#17 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(140): retry(1, Object(Closure), 0, Object(Closure))
+#18 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(116): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->repositoryExists()
+#19 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(84): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#20 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#21 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(83): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#22 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#23 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#24 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#25 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#26 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#27 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#28 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\symfony\\console\\Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\symfony\\console\\Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 C:\\xampp\\htdocs\\belajar-laravel-restful-api-main\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 {main}
+"} 
+[2024-03-29 13:28:10] testing.INFO: {
+    "data": [
+        {
+            "id": 21,
+            "first_name": "first 0",
+            "last_name": "last 0",
+            "email": "test0@pzn.com",
+            "phone": "111110"
+        },
+        {
+            "id": 22,
+            "first_name": "first 1",
+            "last_name": "last 1",
+            "email": "test1@pzn.com",
+            "phone": "111111"
+        },
+        {
+            "id": 23,
+            "first_name": "first 2",
+            "last_name": "last 2",
+            "email": "test2@pzn.com",
+            "phone": "111112"
+        },
+        {
+            "id": 24,
+            "first_name": "first 3",
+            "last_name": "last 3",
+            "email": "test3@pzn.com",
+            "phone": "111113"
+        },
+        {
+            "id": 25,
+            "first_name": "first 4",
+            "last_name": "last 4",
+            "email": "test4@pzn.com",
+            "phone": "111114"
+        },
+        {
+            "id": 26,
+            "first_name": "first 5",
+            "last_name": "last 5",
+            "email": "test5@pzn.com",
+            "phone": "111115"
+        },
+        {
+            "id": 27,
+            "first_name": "first 6",
+            "last_name": "last 6",
+            "email": "test6@pzn.com",
+            "phone": "111116"
+        },
+        {
+            "id": 28,
+            "first_name": "first 7",
+            "last_name": "last 7",
+            "email": "test7@pzn.com",
+            "phone": "111117"
+        },
+        {
+            "id": 29,
+            "first_name": "first 8",
+            "last_name": "last 8",
+            "email": "test8@pzn.com",
+            "phone": "111118"
+        },
+        {
+            "id": 30,
+            "first_name": "first 9",
+            "last_name": "last 9",
+            "email": "test9@pzn.com",
+            "phone": "111119"
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/contacts?page=1",
+        "last": "http:\/\/localhost\/api\/contacts?page=2",
+        "prev": null,
+        "next": "http:\/\/localhost\/api\/contacts?page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 2,
+        "links": [
+            {
+                "url": null,
+                "label": "&laquo; Previous",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=2",
+                "label": "2",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=2",
+                "label": "Next &raquo;",
+                "active": false
+            }
+        ],
+        "path": "http:\/\/localhost\/api\/contacts",
+        "per_page": 10,
+        "to": 10,
+        "total": 20
+    }
+}  
+[2024-03-29 13:28:15] testing.INFO: {
+    "data": [
+        {
+            "id": 41,
+            "first_name": "first 0",
+            "last_name": "last 0",
+            "email": "test0@pzn.com",
+            "phone": "111110"
+        },
+        {
+            "id": 42,
+            "first_name": "first 1",
+            "last_name": "last 1",
+            "email": "test1@pzn.com",
+            "phone": "111111"
+        },
+        {
+            "id": 43,
+            "first_name": "first 2",
+            "last_name": "last 2",
+            "email": "test2@pzn.com",
+            "phone": "111112"
+        },
+        {
+            "id": 44,
+            "first_name": "first 3",
+            "last_name": "last 3",
+            "email": "test3@pzn.com",
+            "phone": "111113"
+        },
+        {
+            "id": 45,
+            "first_name": "first 4",
+            "last_name": "last 4",
+            "email": "test4@pzn.com",
+            "phone": "111114"
+        },
+        {
+            "id": 46,
+            "first_name": "first 5",
+            "last_name": "last 5",
+            "email": "test5@pzn.com",
+            "phone": "111115"
+        },
+        {
+            "id": 47,
+            "first_name": "first 6",
+            "last_name": "last 6",
+            "email": "test6@pzn.com",
+            "phone": "111116"
+        },
+        {
+            "id": 48,
+            "first_name": "first 7",
+            "last_name": "last 7",
+            "email": "test7@pzn.com",
+            "phone": "111117"
+        },
+        {
+            "id": 49,
+            "first_name": "first 8",
+            "last_name": "last 8",
+            "email": "test8@pzn.com",
+            "phone": "111118"
+        },
+        {
+            "id": 50,
+            "first_name": "first 9",
+            "last_name": "last 9",
+            "email": "test9@pzn.com",
+            "phone": "111119"
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/contacts?page=1",
+        "last": "http:\/\/localhost\/api\/contacts?page=2",
+        "prev": null,
+        "next": "http:\/\/localhost\/api\/contacts?page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 2,
+        "links": [
+            {
+                "url": null,
+                "label": "&laquo; Previous",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=2",
+                "label": "2",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=2",
+                "label": "Next &raquo;",
+                "active": false
+            }
+        ],
+        "path": "http:\/\/localhost\/api\/contacts",
+        "per_page": 10,
+        "to": 10,
+        "total": 20
+    }
+}  
+[2024-03-29 13:28:16] testing.INFO: {
+    "data": [
+        {
+            "id": 61,
+            "first_name": "first 0",
+            "last_name": "last 0",
+            "email": "test0@pzn.com",
+            "phone": "111110"
+        },
+        {
+            "id": 62,
+            "first_name": "first 1",
+            "last_name": "last 1",
+            "email": "test1@pzn.com",
+            "phone": "111111"
+        },
+        {
+            "id": 63,
+            "first_name": "first 2",
+            "last_name": "last 2",
+            "email": "test2@pzn.com",
+            "phone": "111112"
+        },
+        {
+            "id": 64,
+            "first_name": "first 3",
+            "last_name": "last 3",
+            "email": "test3@pzn.com",
+            "phone": "111113"
+        },
+        {
+            "id": 65,
+            "first_name": "first 4",
+            "last_name": "last 4",
+            "email": "test4@pzn.com",
+            "phone": "111114"
+        },
+        {
+            "id": 66,
+            "first_name": "first 5",
+            "last_name": "last 5",
+            "email": "test5@pzn.com",
+            "phone": "111115"
+        },
+        {
+            "id": 67,
+            "first_name": "first 6",
+            "last_name": "last 6",
+            "email": "test6@pzn.com",
+            "phone": "111116"
+        },
+        {
+            "id": 68,
+            "first_name": "first 7",
+            "last_name": "last 7",
+            "email": "test7@pzn.com",
+            "phone": "111117"
+        },
+        {
+            "id": 69,
+            "first_name": "first 8",
+            "last_name": "last 8",
+            "email": "test8@pzn.com",
+            "phone": "111118"
+        },
+        {
+            "id": 70,
+            "first_name": "first 9",
+            "last_name": "last 9",
+            "email": "test9@pzn.com",
+            "phone": "111119"
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/contacts?page=1",
+        "last": "http:\/\/localhost\/api\/contacts?page=2",
+        "prev": null,
+        "next": "http:\/\/localhost\/api\/contacts?page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 2,
+        "links": [
+            {
+                "url": null,
+                "label": "&laquo; Previous",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=2",
+                "label": "2",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=2",
+                "label": "Next &raquo;",
+                "active": false
+            }
+        ],
+        "path": "http:\/\/localhost\/api\/contacts",
+        "per_page": 10,
+        "to": 10,
+        "total": 20
+    }
+}  
+[2024-03-29 13:28:18] testing.INFO: {
+    "data": [
+        {
+            "id": 81,
+            "first_name": "first 0",
+            "last_name": "last 0",
+            "email": "test0@pzn.com",
+            "phone": "111110"
+        },
+        {
+            "id": 82,
+            "first_name": "first 1",
+            "last_name": "last 1",
+            "email": "test1@pzn.com",
+            "phone": "111111"
+        },
+        {
+            "id": 83,
+            "first_name": "first 2",
+            "last_name": "last 2",
+            "email": "test2@pzn.com",
+            "phone": "111112"
+        },
+        {
+            "id": 84,
+            "first_name": "first 3",
+            "last_name": "last 3",
+            "email": "test3@pzn.com",
+            "phone": "111113"
+        },
+        {
+            "id": 85,
+            "first_name": "first 4",
+            "last_name": "last 4",
+            "email": "test4@pzn.com",
+            "phone": "111114"
+        },
+        {
+            "id": 86,
+            "first_name": "first 5",
+            "last_name": "last 5",
+            "email": "test5@pzn.com",
+            "phone": "111115"
+        },
+        {
+            "id": 87,
+            "first_name": "first 6",
+            "last_name": "last 6",
+            "email": "test6@pzn.com",
+            "phone": "111116"
+        },
+        {
+            "id": 88,
+            "first_name": "first 7",
+            "last_name": "last 7",
+            "email": "test7@pzn.com",
+            "phone": "111117"
+        },
+        {
+            "id": 89,
+            "first_name": "first 8",
+            "last_name": "last 8",
+            "email": "test8@pzn.com",
+            "phone": "111118"
+        },
+        {
+            "id": 90,
+            "first_name": "first 9",
+            "last_name": "last 9",
+            "email": "test9@pzn.com",
+            "phone": "111119"
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/contacts?page=1",
+        "last": "http:\/\/localhost\/api\/contacts?page=2",
+        "prev": null,
+        "next": "http:\/\/localhost\/api\/contacts?page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 2,
+        "links": [
+            {
+                "url": null,
+                "label": "&laquo; Previous",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=2",
+                "label": "2",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=2",
+                "label": "Next &raquo;",
+                "active": false
+            }
+        ],
+        "path": "http:\/\/localhost\/api\/contacts",
+        "per_page": 10,
+        "to": 10,
+        "total": 20
+    }
+}  
+[2024-03-29 13:28:21] testing.INFO: {
+    "data": [],
+    "links": {
+        "first": "http:\/\/localhost\/api\/contacts?page=1",
+        "last": "http:\/\/localhost\/api\/contacts?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": null,
+        "last_page": 1,
+        "links": [
+            {
+                "url": null,
+                "label": "&laquo; Previous",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": null,
+                "label": "Next &raquo;",
+                "active": false
+            }
+        ],
+        "path": "http:\/\/localhost\/api\/contacts",
+        "per_page": 10,
+        "to": null,
+        "total": 0
+    }
+}  
+[2024-03-29 13:28:22] testing.INFO: {
+    "data": [
+        {
+            "id": 126,
+            "first_name": "first 5",
+            "last_name": "last 5",
+            "email": "test5@pzn.com",
+            "phone": "111115"
+        },
+        {
+            "id": 127,
+            "first_name": "first 6",
+            "last_name": "last 6",
+            "email": "test6@pzn.com",
+            "phone": "111116"
+        },
+        {
+            "id": 128,
+            "first_name": "first 7",
+            "last_name": "last 7",
+            "email": "test7@pzn.com",
+            "phone": "111117"
+        },
+        {
+            "id": 129,
+            "first_name": "first 8",
+            "last_name": "last 8",
+            "email": "test8@pzn.com",
+            "phone": "111118"
+        },
+        {
+            "id": 130,
+            "first_name": "first 9",
+            "last_name": "last 9",
+            "email": "test9@pzn.com",
+            "phone": "111119"
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/contacts?page=1",
+        "last": "http:\/\/localhost\/api\/contacts?page=4",
+        "prev": "http:\/\/localhost\/api\/contacts?page=1",
+        "next": "http:\/\/localhost\/api\/contacts?page=3"
+    },
+    "meta": {
+        "current_page": 2,
+        "from": 6,
+        "last_page": 4,
+        "links": [
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=1",
+                "label": "&laquo; Previous",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=1",
+                "label": "1",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=2",
+                "label": "2",
+                "active": true
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=3",
+                "label": "3",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=4",
+                "label": "4",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/contacts?page=3",
+                "label": "Next &raquo;",
+                "active": false
+            }
+        ],
+        "path": "http:\/\/localhost\/api\/contacts",
+        "per_page": 5,
+        "to": 10,
+        "total": 20
+    }
+}  
